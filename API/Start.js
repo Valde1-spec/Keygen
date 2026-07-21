@@ -35,7 +35,7 @@ module.exports = (req, res) => {
 
   // Build reward URL
   const rewardUrl = `https://${req.headers.host}/reward.html?token=${encodeURIComponent(finalToken)}`;
-  const lootlabsUrl = `https://lootlabs.gg/YOUR_LOOTLABS_ID?url=${encodeURIComponent(rewardUrl)}`;
+  const lootlabsUrl = `https://loot-link.com/s?FIJ9MsmJ?url=${encodeURIComponent(rewardUrl)}`;
 
   res.redirect(lootlabsUrl);
 };
