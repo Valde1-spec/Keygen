@@ -2,7 +2,7 @@
   "rewrites": [
     { "source": "/start", "destination": "/api/start" },
     { "source": "/get-key", "destination": "/api/get-key" },
-    { "source": "/activate", "destination": "/api/activate" },
-    { "source": "/verify", "destination": "/api/verify" }
+    { "source": "/verify", "destination": "/api/verify" },
+    { "source": "/premium", "destination": "/api/premium" }
   ]
 }
