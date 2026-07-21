@@ -4,17 +4,32 @@
   <meta charset="UTF-8">
   <title>Key Generator</title>
   <style>
-    body { background:#0a0a0a; color:#fff; display:flex; justify-content:center; align-items:center; height:100vh; font-family:Arial; }
-    h1 { font-size: 28px; }
-    p { font-size: 16px; color:#aaa; margin:20px 0; }
-    a, button { padding:16px 45px; background:#5865F2; color:white; text-decoration:none; border-radius:8px; font-weight:bold; font-size:18px; border:none; }
+    body { background:#0a0a0a; color:#fff; display:flex; justify-content:center; align-items:center; height:100vh; font-family:Arial; text-align:center; }
+    h1 { font-size:28px; }
+    p { color:#aaa; margin:20px 0; font-size:16px; }
+    a, button { padding:16px 45px; color:white; text-decoration:none; border-radius:8px; font-weight:bold; font-size:18px; border:none; cursor:pointer; }
+    .gen-btn { background:#5865F2; display:inline-block; margin-bottom:15px; }
+    .prem-btn { background:#f0a500; display:inline-block; }
   </style>
 </head>
 <body>
-  <div style="text-align:center">
+  <div>
     <h1>🔑 Get Your Key</h1>
     <p>Complete a short ad to receive your 24‑hour key.</p>
-    <a href="/start">Generate Key</a>
+    <a href="/start" class="gen-btn">Generate Key</a>
+    <br>
+    <button onclick="premiumAccess()" class="prem-btn">⭐ Premium Access</button>
   </div>
+
+  <script>
+    function premiumAccess() {
+      const code = prompt("Enter premium code:");
+      if (code === "iceandfire") {
+        window.location.href = "/premium?code=iceandfire";
+      } else if (code !== null) {
+        alert("Invalid code.");
+      }
+    }
+  </script>
 </body>
 </html>
